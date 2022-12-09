@@ -11,20 +11,9 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
-$color-white:                       #ffffff;
-$color-alice-blue:                  #f8fdff;
-$color-whisper:                     #ebebeb;
-$color-deep-sky-blue:               #00b2ff;
+$color-tangaroa:                    #011c40;
+$color-alice-blue:                  #f9fbfd;
 $color-silver:                      #c4c4c4;
-$color-footer-white:                rgba(255, 255, 255, 0.7);
-$color-black-pearl:                 #041827;
-$color-black-pearl-opacity:         rgba(4, 20, 39, 0.15);
-$color-shalimar:                    rgba(248, 253, 255, 0.7);
-
-// Gradient
-$black-to-header:                   linear-gradient(to bottom, $color-black-pearl 85%, $color-transparent 100%);
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
 // ---------------------------------
@@ -36,9 +25,7 @@ $fz-default:                        16px;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
-$ff-roboto-condensed:               "Roboto Condensed", "Arial", sans-serif;
-$ff-roboto:                         "Roboto", "Arial", sans-serif;
-$ff-ptmono:                         "PTMono", "Courier New", monospace;
+$ff-monserrat:                      "Monserrat", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------

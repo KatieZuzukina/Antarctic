@@ -1,53 +1,14 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  display: block;
+  padding: 10px 0;
 
-  color: $color-default-white;
+  color: $color-tangaroa;
 
   background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
   text-align: center;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
-
-  &--main-header {
-    display: block;
-    height: 40px;
-    min-width: 164px;
-    font-family: $ff-roboto-condensed;
-    font-weight: 700;
-    font-size: 14px;
-    padding-top: 5px;
-    padding-right: 15px;
-    padding-left: 20px;
-    line-height: 16px;
-    color: $color-default-white;
-    letter-spacing: 0.05em;
-    margin-right: 65px;
-    text-transform: uppercase;
-    background-color: $color-transparent;
-    border: 1px solid $color-default-white;
-    border-radius: 3px;
-  }
-}
-
-@media (max-width: $vp-1023) {
-  .btn--main-header {
-    display: none;
-  }
+  position: absolute;
+  width: 100%;
+  bottom: -64px;
 }

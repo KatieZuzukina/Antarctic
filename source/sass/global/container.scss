@@ -2,17 +2,17 @@
   width: 100%;
   max-width: 1260px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 @media (max-width: $vp-767) {
   .container {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 }
 
 @media (max-width: $vp-1023) {
   .container {
-    padding: 0 50px;
+    padding: 0 45px;
   }
 }

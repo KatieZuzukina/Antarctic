@@ -1,0 +1,73 @@
+.about-us {
+  margin: 120px 0 146px;
+
+  @include vp-1023 {
+    margin: 90px 0 77px;
+  }
+
+  @include vp-767 {
+    margin: 56px 0 85px;
+  }
+}
+
+.about-us__text h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  padding: 0;
+  margin-top: 13px;
+  color: $color-tangaroa;
+
+  @include vp-1023 {
+    line-height: 37px;
+    font-size: 26px;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    line-height: 34px;
+    font-size: 24px;
+  }
+}
+
+.about-us__text p {
+  padding: 0;
+
+  @include vp-1023 {
+    margin-top: 15px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 34px;
+  }
+}
+
+.about-us__wrapper {
+  display: grid;
+  grid-template-columns: 45% 48%;
+  justify-content: space-between;
+  align-items: center;
+
+  @include vp-1023 {
+    grid-template-columns: 48% 49%;
+    align-items: flex-start;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about-us__image {
+  @include vp-1023 {
+    width: 327px;
+    height: 174;
+    margin-top: 10px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 156px;
+  }
+}

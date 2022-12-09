@@ -1,0 +1,159 @@
+.cruises__wrapper {
+  padding: 85px 65px 120px;
+
+  @include vp-1023 {
+    padding-bottom: 101px;
+  }
+
+  @include vp-767 {
+    padding: 57px 25px 65px;
+  }
+}
+
+.cruises__title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 49px;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+    padding-top: 89px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 31px;
+    padding-top: 0;
+  }
+}
+
+.cruises__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cruises__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.cruises__card {
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+
+  @include vp-1023 {
+    height: 386px;
+  }
+}
+
+.cruises__card-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.cruises__card-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin: 30px 25px 19px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.cruises__card-hover {
+  position: absolute;
+  top: 0;
+  background-color: $color-tangaroa;
+  z-index: 1;
+  height: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  width: 100%;
+  visibility: hidden;
+  padding: 29px 25px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    height: 386px;
+  }
+}
+
+.cruises__card-hover-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin: 0;
+}
+
+.cruises__card-hover dt {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-alice-blue;
+
+  &:last-child {
+    padding-top: 7px;
+  }
+}
+
+.cruises__card-hover dd {
+  color: $color-alice-blue;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 9px;
+}
+
+.cruises__item:hover .cruises__card-hover {
+  visibility: visible;
+}
+
+.cruises__item:focus .cruises__card-hover {
+  visibility: visible;
+  border-radius: 3px;
+  outline: solid #011c40;
+  outline-offset: 3px;
+}
+
+.cruises__card-hover:focus ~ .cruises__card-link {
+  outline: 2px solid #011c40;
+}
+
+.cruises__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $color-alice-blue;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  color: #011c40;
+  padding: 10px;
+}

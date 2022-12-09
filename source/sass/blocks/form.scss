@@ -1,0 +1,105 @@
+.form {
+  background-color: $color-tangaroa;
+  padding: 43px 51px 50px;
+
+  @include vp-1023 {
+    width: 60%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 35px 30px;
+  }
+}
+
+.form__description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin-top: 0;
+  margin-bottom: 28px;
+
+  @include vp-767 {
+    line-height: 25px;
+    text-align: center;
+  }
+}
+
+.form__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.form__item input {
+  border: none;
+  padding: 13px 16px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.form__agree {
+  display: flex;
+  align-items: center;
+}
+
+.form__label-checkbox {
+  font-size: 10px;
+  line-height: 13px;
+  color: $color-alice-blue;
+  z-index: 1;
+  position: relative;
+  padding: 5px 0 31px 23px;
+  cursor: pointer;
+
+  @include vp-767 {
+    padding: 0 0 25px 28px;
+  }
+}
+
+.form__control-mark {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background-color: $color-alice-blue;
+  left: 1px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.form__label-checkbox input[type="checkbox"]:checked + .form__control-mark::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background-image: url("../img/svg/checked.svg");
+  top: 6px;
+  right: 3px;
+}
+
+.form__label-checkbox input[type="checkbox"]:focus-within ~ .form__control-mark {
+  outline: 1px solid $color-alice-blue;
+}
+
+.form__label-checkbox:hover {
+  opacity: 0.8;
+}
+
+.form__button {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  cursor: pointer;
+  color: $color-tangaroa;
+  background-color: $color-alice-blue;
+
+  &:hover {
+    background-color: $color-silver;
+    color: $color-alice-blue;
+  }
+}
