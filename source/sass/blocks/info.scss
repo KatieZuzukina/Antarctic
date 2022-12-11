@@ -7,7 +7,7 @@
   grid-template-columns: 560px auto;
   column-gap: 100px;
   padding-top: 114px;
-  padding-bottom: 120px;
+  padding-bottom: 124px;
   align-items: center;
 
   @include vp-1023 {
@@ -53,6 +53,7 @@
     font-size: 18px;
     line-height: 27px;
     margin: 0;
+    padding-top: 3px;
   }
 
   p {
@@ -69,7 +70,7 @@
       width: 18px;
       height: 22px;
       background: url("../img/sprite/marker.svg");
-      top: 7px;
+      top: 3px;
       left: -28px;
     }
 

@@ -40,6 +40,7 @@
 .booking__present {
   padding-left: 59px;
   width: 552px;
+  padding-bottom: 9px;
 
   @include vp-1023 {
     padding: 0;
@@ -76,6 +77,8 @@
 .booking__description {
   font-size: 18px;
   line-height: 27px;
+  display: block;
+  padding-top: 7px;
 
   @include vp-767 {
     font-size: 16px;
