@@ -634,10 +634,10 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1250px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 103px;
+  padding-right: 103px;
 }
 
 .btn {
@@ -971,6 +971,8 @@ button,
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
+  margin-left: 53px;
+  margin-right: 53px;
 }
 
 .cruises__item {
@@ -995,7 +997,7 @@ button,
   font-size: 18px;
   line-height: 27px;
   color: #f9fbfd;
-  margin: 30px 25px 19px;
+  margin: 30px 30px 22px;
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -1446,6 +1448,10 @@ button,
     line-height: 25px;
   }
 
+  .advantages__subtitle-3 {
+    margin-bottom: 20px;
+  }
+
   .footer__wrapper {
     margin: 48px 0;
   }
@@ -1486,10 +1492,16 @@ button,
   .cruises__list {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    margin-left: 14px;
+    margin-right: 14px;
   }
 
   .cruises__card {
     height: 386px;
+  }
+
+  .cruises__card-title {
+    margin: 30px 36px 27px;
   }
 
   .cruises__card-hover {
@@ -1531,6 +1543,10 @@ button,
     margin-bottom: 5px;
   }
 
+  .booking__description {
+    padding-top: 0;
+  }
+
   .booking__description br {
     display: none;
   }
@@ -1549,6 +1565,14 @@ button,
     height: 335px;
     background-image: url("../img/bg-map-tablet.jpg");
   }
+
+  .info__address h4 {
+    padding-top: 0;
+  }
+
+  .info__address p {
+    margin-top: 27px;
+  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
@@ -1559,7 +1583,7 @@ button,
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 25px;
+    padding: 0 15px;
   }
 
   .header {
@@ -1759,7 +1783,7 @@ button,
 
   .footer__navigation-item {
     padding-left: 0;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
   }
 
   .footer__navigation-item:last-child {
@@ -1767,7 +1791,7 @@ button,
   }
 
   .footer__social-list {
-    margin-top: 23px;
+    margin-top: 17px;
   }
 
   .footer__social-item {
@@ -1793,6 +1817,11 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin: 0;
+  }
+
+  .cruises__card-title {
+    margin: 30px 25px 19px;
   }
 
   .form {
@@ -1803,6 +1832,7 @@ button,
   .form__description {
     line-height: 25px;
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .form__label-checkbox {
@@ -1835,6 +1865,7 @@ button,
     font-size: 16px;
     line-height: 22px;
     text-align: center;
+    padding-top: 4px;
   }
 
   .booking__description br {
@@ -1852,7 +1883,7 @@ button,
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
     padding-top: 57px;
-    padding-bottom: 64px;
+    padding-bottom: 63px;
   }
 
   .info__map {
@@ -1862,10 +1893,6 @@ button,
 
   .info__address {
     margin-bottom: 38px;
-  }
-
-  .info__address p {
-    margin-top: 27px;
   }
 }
 
