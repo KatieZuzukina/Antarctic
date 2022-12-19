@@ -1,22 +1,47 @@
-let navMain = document.querySelector('.header__navigation');
-let navToggle = document.querySelector('.header__navigation-toogle');
-let wrapperBlock = document.querySelector('.header__wrapper');
+const navMain = document.querySelector('.header__navigation');
+const navToggle = document.querySelector('.header__navigation-toogle');
+const wrapperBlock = document.querySelector('.header__wrapper');
 
-navMain.classList.remove('.header__navigation--nojs');
-navToggle.classList.remove('.header__navigation-toogle--nojs');
+const openMenuHandler = () => {
+  navMain.classList.add('header__navigation--closed');
+  navToggle.classList.remove('header__navigation-toogle--opened');
+  navToggle.classList.add('header__navigation-toogle--closed');
+  wrapperBlock.classList.add('header__wrapper--opened');
+  document.documentElement.classList.add('scroll-lock');
+  document.addEventListener('keydown', keyCloseHandler);
+};
 
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('header__navigation--closed')) {
-    navMain.classList.remove('header__navigation--closed');
+const closeMenuHandler = () => {
+  navMain.classList.remove('header__navigation--closed');
+  navToggle.classList.remove('header__navigation-toogle--closed');
+  navToggle.classList.add('header__navigation-toogle--opened');
+  wrapperBlock.classList.remove('header__wrapper--opened');
+  document.documentElement.classList.remove('scroll-lock');
+  document.removeEventListener('keydown', keyCloseHandler);
+};
 
-    navToggle.classList.remove('header__navigation-toogle--closed');
-    navToggle.classList.add('header__navigation-toogle--opened');
-    wrapperBlock.classList.remove('header__wrapper--open');
-  } else {
-    navMain.classList.add('header__navigation--closed');
-    navToggle.classList.remove('header__navigation-toogle--opened');
-    navToggle.classList.add('header__navigation-toogle--closed');
-    wrapperBlock.classList.add('header__wrapper--open');
+function keyCloseHandler(evt) {
+  if (evt.key.startsWith('Esc')) {
+    closeMenuHandler();
+  }
+}
 
+document.addEventListener('click', (e) => {
+  const isLinkTarget = e.target.nodeName === 'A';
+  if (!wrapperBlock.contains(e.target) || isLinkTarget) {
+    closeMenuHandler();
   }
 });
+
+const initOpenMenu = () => {
+  navToggle.addEventListener('click', () => {
+    if (navMain.classList.contains('header__navigation--closed')) {
+      return closeMenuHandler();
+    }
+    return openMenuHandler();
+  });
+  navMain.classList.remove('header__navigation--nojs');
+  navToggle.classList.remove('header__navigation-toogle--nojs');
+};
+
+export {initOpenMenu};

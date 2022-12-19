@@ -31,10 +31,6 @@
   @include vp-767 {
     margin-bottom: 16px;
   }
-
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .footer__navigaton-wrapper {
@@ -101,14 +97,25 @@
   display: flex;
   flex-wrap: wrap;
   cursor: pointer;
+  width: 150px;
+  justify-content: flex-end;
 
   @include vp-767 {
     margin-top: 17px;
+    justify-content: flex-start;
   }
 }
 
 .footer__social-item {
   padding-right: 27px;
+
+  &:first-child {
+    padding-left: 10px;
+
+    @include vp-767 {
+      padding-left: 0;
+    }
+  }
 
   &:last-child {
     padding-right: 0;

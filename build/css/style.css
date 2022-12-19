@@ -445,7 +445,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #f2f5f6;
+  background-color: #f9fbfd;
 }
 
 a {
@@ -457,7 +457,7 @@ img,
 video {
   display: block;
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 textarea {
@@ -465,8 +465,8 @@ textarea {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0 1000px #f2f5f6;
-  box-shadow: inset 0 0 0 1000px #f2f5f6;
+  -webkit-box-shadow: inset 0 0 0 1000px #f9fbfd;
+  box-shadow: inset 0 0 0 1000px #f9fbfd;
   -webkit-text-fill-color: #000000;
 }
 
@@ -634,10 +634,10 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1366px;
+  max-width: 1250px;
   margin: 0 auto;
-  padding-left: 103px;
-  padding-right: 103px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .btn {
@@ -680,28 +680,6 @@ button,
   fill: #f9fbfd;
 }
 
-.header__logo-image:hover {
-  opacity: 0.8;
-}
-
-.header__navigation--nojs {
-  display: block;
-}
-
-.header__navigation-toogle--nojs {
-  display: block;
-}
-
-.header__navigation-toogle--nojs::before {
-  position: absolute;
-  content: "";
-  width: 24px;
-  height: 14px;
-  top: 24px;
-  right: 15px;
-  background-image: url("../img/svg/burger-menu.svg");
-}
-
 .header__navigation-toogle {
   display: none;
   cursor: pointer;
@@ -716,16 +694,6 @@ button,
   right: 5px;
   background-image: url("../img/svg/closed.svg");
   background-repeat: no-repeat;
-}
-
-.header__navigation-toogle--opened::before {
-  position: absolute;
-  content: "";
-  width: 24px;
-  height: 14px;
-  top: 24px;
-  right: 15px;
-  background-image: url("../img/svg/burger-menu.svg");
 }
 
 .header__navigation-list {
@@ -743,6 +711,10 @@ button,
   padding-right: 33px;
 }
 
+.header__navigation-item:first-child {
+  padding-left: 24px;
+}
+
 .header__navigation-item:last-child {
   padding-right: 0;
 }
@@ -755,6 +727,10 @@ button,
 
 .header__navigation-link:hover {
   opacity: 0.8;
+}
+
+.header__description {
+  margin-bottom: 30px;
 }
 
 .header__description-title {
@@ -801,6 +777,15 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.about-us__image {
+  margin: 0 auto;
+}
+
+.about-us__image img {
+  width: 100%;
+  height: 301px;
 }
 
 .advantages {
@@ -885,10 +870,6 @@ button,
   fill: #f9fbfd;
 }
 
-.footer__logo-image:hover {
-  opacity: 0.8;
-}
-
 .footer__navigaton-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -935,10 +916,18 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   cursor: pointer;
+  width: 150px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .footer__social-item {
   padding-right: 27px;
+}
+
+.footer__social-item:first-child {
+  padding-left: 10px;
 }
 
 .footer__social-item:last-child {
@@ -950,7 +939,7 @@ button,
 }
 
 .cruises__wrapper {
-  padding: 85px 65px 120px;
+  padding: 85px 7px 120px;
 }
 
 .cruises__title {
@@ -984,10 +973,12 @@ button,
   position: relative;
   cursor: pointer;
   margin: 0 auto;
+  height: 386px;
 }
 
-.cruises__card-image {
-  display: block;
+.cruises__card img {
+  -o-object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -1013,7 +1004,7 @@ button,
   overflow-y: auto;
   width: 100%;
   visibility: hidden;
-  padding: 29px 25px 35px;
+  padding: 15px 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1082,9 +1073,15 @@ button,
   padding: 10px;
 }
 
+.cruises__link:hover {
+  background-color: #c4c4c4;
+  color: #f9fbfd;
+}
+
 .form {
   background-color: #011c40;
   padding: 43px 51px 50px;
+  width: 88%;
 }
 
 .form__description {
@@ -1107,6 +1104,10 @@ button,
   padding: 13px 16px;
   margin-bottom: 18px;
   width: 100%;
+}
+
+.form__item input:hover {
+  background-color: #c4c4c4;
 }
 
 .form__agree {
@@ -1186,16 +1187,18 @@ button,
   padding-bottom: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 35%;
-  grid-template-columns: 60% 35%;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-column-gap: 101px;
+  -moz-column-gap: 101px;
+  column-gap: 101px;
 }
 
 .booking__present {
   padding-left: 59px;
-  width: 552px;
   padding-bottom: 9px;
 }
 
@@ -1284,6 +1287,10 @@ button,
   background: url("../img/sprite/phone.svg");
   top: 0;
   left: -28px;
+}
+
+.info__address a:hover {
+  opacity: 0.5;
 }
 
 /* @mixin hover-focus {
@@ -1404,9 +1411,11 @@ button,
   }
 
   .about-us__image {
-    width: 327px;
-    height: 174px;
     margin-top: 10px;
+  }
+
+  .about-us__image img {
+    height: 174px;
   }
 
   .advantages__wrapper {
@@ -1492,12 +1501,7 @@ button,
   .cruises__list {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    margin-left: 14px;
-    margin-right: 14px;
-  }
-
-  .cruises__card {
-    height: 386px;
+    margin: 0 15px;
   }
 
   .cruises__card-title {
@@ -1597,7 +1601,17 @@ button,
     padding-top: 20px;
   }
 
-  .header__wrapper--open {
+  .header__wrapper::before {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 100vw;
+    background-color: rgba(0, 43, 102, 0.5);
+    pointer-events: none;
+  }
+
+  .header__wrapper--opened {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1605,7 +1619,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
@@ -1618,11 +1632,15 @@ button,
     margin-top: 20px;
   }
 
-  .header__wrapper--open + .header__description {
+  .header__wrapper--opened::before {
+    content: "";
+  }
+
+  .header__wrapper--opened + .header__description {
     display: none;
   }
 
-  .header__wrapper--open .header__logo-image {
+  .header__wrapper--opened .header__logo-image {
     fill: #011c40;
   }
 
@@ -1637,6 +1655,9 @@ button,
     background-color: transparent;
     width: 24px;
     height: 14px;
+    top: 24px;
+    right: 15px;
+    background-image: url("../img/svg/burger-menu.svg");
   }
 
   .header__navigation {
@@ -1668,6 +1689,10 @@ button,
     flex-direction: column;
   }
 
+  .header__navigation-item:first-child {
+    padding-left: 0;
+  }
+
   .header__navigation-link {
     line-height: 22px;
     font-size: 18px;
@@ -1682,6 +1707,15 @@ button,
   .header__description-slogan {
     line-height: 23px;
     font-size: 16px;
+  }
+
+  .header__navigation--nojs {
+    display: block;
+    margin-top: 0;
+  }
+
+  .header__navigation-toogle--nojs {
+    display: none;
   }
 
   .about-us {
@@ -1707,8 +1741,7 @@ button,
     flex-direction: column;
   }
 
-  .about-us__image {
-    width: 290px;
+  .about-us__image img {
     height: 156px;
   }
 
@@ -1792,6 +1825,13 @@ button,
 
   .footer__social-list {
     margin-top: 17px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .footer__social-item:first-child {
+    padding-left: 0;
   }
 
   .footer__social-item {
@@ -1818,6 +1858,9 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     margin: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .cruises__card-title {

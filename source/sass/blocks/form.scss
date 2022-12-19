@@ -1,6 +1,7 @@
 .form {
   background-color: $color-tangaroa;
   padding: 43px 51px 50px;
+  width: 88%;
 
   @include vp-1023 {
     width: 60%;
@@ -38,6 +39,10 @@
   padding: 13px 16px;
   margin-bottom: 18px;
   width: 100%;
+}
+
+.form__item input:hover {
+  background-color: $color-silver;
 }
 
 .form__agree {

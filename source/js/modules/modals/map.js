@@ -15,7 +15,7 @@ export const initMap = () => {
 
         iconLayout: 'default#image',
 
-        iconImageHref: '../img/sprite/marker.svg',
+        iconImageHref: './img/sprite/marker.svg',
 
         iconSize: [18, 22],
 
