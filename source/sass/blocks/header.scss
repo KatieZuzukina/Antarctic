@@ -4,6 +4,8 @@
   color: $color-alice-blue;
   position: relative;
   background-image: url("../img/bg-image-desktop.webp");
+  background-size: cover;
+  background-position: bottom;
 
   @media (min-width: $vp-1023) {
     @include retina {

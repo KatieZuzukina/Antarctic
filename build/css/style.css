@@ -660,6 +660,8 @@ button,
   color: #f9fbfd;
   position: relative;
   background-image: url("../img/bg-image-desktop.webp");
+  background-size: cover;
+  background-position: bottom;
 }
 
 .header__wrapper {
